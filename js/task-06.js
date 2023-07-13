@@ -5,11 +5,14 @@ textInputEl.addEventListener('blur', checkedLength);
 function checkedLength(event)
 {
     if (event.currentTarget.value.length === textInputLength) {
-        textInputEl.classList.add('valid');
+        textInputEl.classList.remove('invalid')
+        textInputEl.classList.add('valid')
+        
     }
 
-    else (
+    else {
+        textInputEl.classList.remove('valid')
         textInputEl.classList.add('invalid')
-    )
+    }
     
 }
